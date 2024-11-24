@@ -18,6 +18,7 @@ scrapy startproject <projectname>
 ```
 
 example
+
 ```shell
 scrapy startproject tamildrops
 ```
@@ -33,11 +34,12 @@ pip install scrapy-playwright
 run the following to install headless browsers for playwright
 
 ```shell
-playwright intstall # for all browsers
+playwright install # for all browsers
 playwright install chrome # just for chrome
 ```
 
 Then replace the DOWNLOAD_HANDLERS in `settings.py` with the following
+
 ```
 # settings.py
 DOWNLOAD_HANDLERS = {
