@@ -18,8 +18,11 @@ class TamilDropsSpider(scrapy.Spider):
         for link in links_json[0]['links']:
             yield scrapy.Request(link, meta={
                 "playwright": True,
-                # page takes longer to render content so - wait for 5 seconds
-                'playwright_page_methods': [PageMethod('wait_for_timeout', 5000)]
+                # page takes longer to render content so - wait for 15 seconds
+                'playwright_page_methods': [PageMethod('wait_for_timeout', 15000),
+                                            PageMethod('wait_for_load_state', 'networkidle'),
+                                            PageMethod('wait_for_load_state', 'load')
+                                           ]
             })
 
     def parse(self, response, **kwargs):
@@ -29,6 +32,7 @@ class TamilDropsSpider(scrapy.Spider):
             'body > div.viewitem-panel > div > div.viewitem-inner > div > div > div.article-content.entry-content > div ::text').extract()
 
         yield {
+            "link": response.url,
             "title": title,
             "content": content
         }

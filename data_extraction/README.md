@@ -77,6 +77,6 @@ response.css('body ::text') # get text only from body and its child
 
 ## Run Spider
 
-navigate to the spiders folder and run 
-`scrapy runspider tamil_drops_spider.py -O puranaanuru-links.jsonl`
+navigate to the spiders folder and run
 
+`scrapy runspider <spider-file.py> -O <output-file.json/jsonl>`

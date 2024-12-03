@@ -59,3 +59,20 @@ Explores options to fine-tune LLM in low resource settings
 ## 13. Cited By [Tamil Co-Writer: Towards inclusive use of generative AI for writing support](https://ceur-ws.org/Vol-3667/GenAILA-paper9.pdf)
 
 Writing support tool for Tamil writers
+
+
+
+
+## Notes
+
+literature review
+
+data collection - low resource languages
+
+few shot learning or more data
+
+try to use LLM to see mapping
+
+data generation try different models - do qualitative study
+
+
