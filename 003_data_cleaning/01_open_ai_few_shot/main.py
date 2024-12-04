@@ -1,3 +1,4 @@
+import datetime
 from openai import OpenAI
 import os
 from dotenv import load_dotenv
@@ -64,36 +65,29 @@ def clean_text():
             { 
                 "role": "user", 
                 "content": f"""
-                    'input': {example_data[0]['input']},
-                    'output': {example_data[0]['output']},
+                    'input': <<input-start>>{example_data[0]['input']}<<input-end>>,
+                    'output': <<output-start>>{example_data[0]['output']}<<output-end>>,
                 """
             },
             { 
                 "role": "user", 
                 "content": f"""
-                    'input': {example_data[1]['input']},
-                    'output': {example_data[1]['output']},
+                    'input': <<input-start>>{example_data[1]['input']}<<input-end>>,
+                    'output': <<output-start>>{example_data[1]['output']}<<output-end>>,
                 """
             },
             { 
                 "role": "user", 
                 "content": f"""
-                    'input': {example_data[2]['input']},
-                    'output': {example_data[2]['output']},
+                    'input': <<inputstart>>{example_data[2]['input']}<<input-end>>,
+                    'output': <<output-start>>{example_data[2]['output']}<<output-end>>,
                 """
             },
             { 
                 "role": "user", 
                 "content": f"""
-                    'input': {new_data[0]},
-                    'output': 'complete',
-                """
-            },
-            { 
-                "role": "user", 
-                "content": f"""
-                    'input': {new_data[1]},
-                    'output': 'complete',
+                    'input': <<input-start>>{new_data[0]}<<input-end>>,
+                    'output': <<output-start>>insert text in Tamil language here<<output-end>>,
                 """
             },
         ]
@@ -104,6 +98,6 @@ def clean_text():
 # Example usage
 if __name__ == "__main__":
     cleaned_text = clean_text()
-    with open("cleaned_text.txt", "w") as f:
+    with open(f"cleaned_text_{datetime.datetime.now().timestamp()}.txt", "w") as f:
         f.write(cleaned_text.content)
     print("Cleaned text:", cleaned_text)
