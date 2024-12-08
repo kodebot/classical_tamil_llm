@@ -307,4 +307,44 @@ New ProverbEval dataset is introduced to evaluate LLMs for low resource language
 
 ## 13. [On Limitations of LLM as Annotator for Low Resource Languages](https://arxiv.org/abs/2411.17637)
 
+Explores the limitations of LLMs as annotators for low resource languages
+
+
+#### Methodology
+
+* Marathi is evaluated using GTP-4o and Gemini 1.0 Pro, Gemma 2 (2B and 9B) and LLaMA 3.1 (8B) on classification, sentiment analysis and hate speech detection tasks
+
+* Few shot and zero shot learning methods are used for annotation
+
+#### Key Findings
+
+* LLMs are not effective as annotators for low resource languages (Marathi in this case)
+
+* GPT-4o achieved the best result
+
+#### Limitations
+
+* only one language is evaluated
+* no details on evaluation metrics are provided
+* hardware used for experiments are not mentioned
+
 ## 14. [Low-Resource Machine Translation through Retrieval-Augmented LLM Prompting: A Study on the Mambai Language](https://arxiv.org/abs/2404.04809)
+
+Focus on Machine Translation for low resource languages using RAG and LLMs
+
+#### Methodology
+
+* Extracted nearly 2000 parallel English-Mambai sentences from a language manual using OCR and alignment techniques, along with a bilingual dictionary.
+* Incorporated parallel sentences and dictionary entries in LLM prompts to optimize translation accuracy (using RAG).
+* Tested the approach using a mix of manual and model-driven Mambai translations across diverse domains.
+
+#### Key Findings
+
+* Retrieval-augmented LLM prompting effectively handles low-resource translation.
+* Domain-specific data significantly improves translation quality.
+* Combining dictionary and sentence-level data enhances performance.
+
+#### Limitations
+
+* Results may not generalize well due to limited corpus size.
+* Relies heavily on the availability of high-quality bilingual data.
