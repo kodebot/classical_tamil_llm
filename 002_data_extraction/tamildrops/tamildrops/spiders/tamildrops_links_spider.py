@@ -26,6 +26,7 @@ class TamilDropsSpider(scrapy.Spider):
         # only get relevant links
         links = [x for x in links
                      if x.startswith('https://vaiyan.blogspot.com/20')
+                     or x.startswith('http://vaiyan.blogspot.com/20')
                      and x.endswith('.html')]
         links.sort()
 
