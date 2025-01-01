@@ -13,3 +13,8 @@ Then run `tamildrops_text_spider.py`
 ```bash
 scrapy runspider tamildrops_text_spider.py -a links_file=puranaanuru_links.json -O puranaanuru_text.json
 ```
+
+
+## Purananuru
+
+Poem 267 and 268 are lost. Some poems miss several lines
