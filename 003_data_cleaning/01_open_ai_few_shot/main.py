@@ -3,6 +3,7 @@ from openai import OpenAI
 import os
 from dotenv import load_dotenv
 from pydantic import BaseModel
+import json
 
 load_dotenv()
 
@@ -16,7 +17,6 @@ class Poem(BaseModel):
     poem_content: list[str]
     poem_meaning: list[str]
     poem_context: list[str]
-
 
 example_data = [
     {
@@ -65,7 +65,7 @@ new_data = [
 ]
 
 # Example function to clean text data using OpenAI's GPT-3
-def clean_text():
+def clean_text(new_data):
     completion = client.beta.chat.completions.parse(
         model="gpt-4o",
         messages=[
@@ -94,7 +94,7 @@ def clean_text():
             { 
                 "role": "user", 
                 "content": f"""
-                    'input': <<input-start>>{new_data[0]}<<input-end>>,
+                    'input': <<input-start>>{new_data}<<input-end>>,
                     'output': <<output-start>>insert text in Tamil language here<<output-end>>,
                 """
             },
@@ -106,7 +106,15 @@ def clean_text():
 
 # Example usage
 if __name__ == "__main__":
-    cleaned_text = clean_text()
-    with open(f"cleaned_text_{datetime.datetime.now().timestamp()}.txt", "w") as f:
-        f.write(cleaned_text.content)
-    print("Cleaned text:", cleaned_text)
+
+    with open('puranaanuru_text.json', 'r', encoding='utf-8') as file:
+        data = json.load(file)
+
+    # Sort the data by the title field
+    cleaned_data = []
+    for item in data:
+        cleaned_data.append(clean_text(item).content)
+        print(f"cleaned {len(cleaned_data)} of {len(data)}\n")
+        with open('puranaanuru_cleaned.json', 'w', encoding='utf-8') as f:
+            json.dump(cleaned_data, f, ensure_ascii=False, indent=4)
+
