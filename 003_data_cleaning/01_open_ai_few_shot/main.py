@@ -236,7 +236,7 @@ def clean_text(new_data):
 # Example usage
 if __name__ == "__main__":
 
-    with open('puranaanuru_text.json', 'r', encoding='utf-8') as file:
+    with open('aganaanuru_text.json', 'r', encoding='utf-8') as file:
         data = json.load(file)
 
     # Sort the data by the title field
@@ -244,6 +244,6 @@ if __name__ == "__main__":
     for item in data:
         cleaned_data.append(clean_text(item).content)
         print(f"cleaned {len(cleaned_data)} of {len(data)}\n")
-        with open('purananuru_cleaned_attempt_2.json', 'w', encoding='utf-8') as f:
+        with open('aganaanuru_cleaned_attempt_2.json', 'w', encoding='utf-8') as f:
             json.dump(cleaned_data, f, ensure_ascii=False, indent=4)
 
