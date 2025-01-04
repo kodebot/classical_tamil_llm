@@ -198,7 +198,7 @@ def clean_text(new_data):
     completion = client.beta.chat.completions.parse(
         model="gpt-4o",
         messages=[
-            {"role": "system", "content": "You are a helpful assistant who is helping a user to clean up a text document in Tamil language."},
+            {"role": "system", "content": "You are a helpful assistant who is helping a user to clean up a text document in Tamil language. Please do NOT make your own meaning or generate text of your own"},
             { 
                 "role": "user", 
                 "content": f"""
@@ -244,6 +244,6 @@ if __name__ == "__main__":
     for item in data:
         cleaned_data.append(clean_text(item).content)
         print(f"cleaned {len(cleaned_data)} of {len(data)}\n")
-        with open('aganaanuru_cleaned_attempt_2.json', 'w', encoding='utf-8') as f:
+        with open('aganaanuru_cleaned_attempt_3.json', 'w', encoding='utf-8') as f:
             json.dump(cleaned_data, f, ensure_ascii=False, indent=4)
 

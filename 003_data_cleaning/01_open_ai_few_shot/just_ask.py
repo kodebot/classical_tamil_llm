@@ -25,7 +25,7 @@ def reformat_poem():
     return completion.choices[0].message
 
 
-# Example usage
+# NOTE: not working
 if __name__ == "__main__":
     print(reformat_poem().content)
 
