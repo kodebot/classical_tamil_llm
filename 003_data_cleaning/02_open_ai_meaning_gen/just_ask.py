@@ -33,15 +33,18 @@ def get_meaning(poem):
 # Example usage
 if __name__ == "__main__":
 
-    with open('../../004_datasets/Purananuru/puranaanuru_web.json', 'r', encoding='utf-8') as file:
+    with open('../../004_datasets/Agananuru/aganaanuru_web.json', 'r', encoding='utf-8') as file:
         data = json.load(file)
 
     upsampled = []
     for item in data:
+        if item["poem_number"] < 143:
+            continue
+
         input = f""""poem_number":{item["poem_number"]}, "poem_content": {item["poem_content"]}"""
         upsampled.append(get_meaning(input).content)
         print(f"cleaned {len(upsampled)} of {len(data)}\n")
-        with open('purananuru_upsample.json', 'w', encoding='utf-8') as f:
+        with open('aganaanuru_upsample2.json', 'w', encoding='utf-8') as f:
             json.dump(upsampled, f, ensure_ascii=False, indent=4)
 
 
