@@ -47,3 +47,18 @@ Golden dataset -
 
 
 
+## Plots loss
+
+Weights and Biases
+Pheonix
+LangWatch
+
+## Evaluation
+
+BERT Score
+CHRF
+Explore all similarity score evaluation metrics
+GPT-4 for scoring
+Human verification
+
+Azure Key Vault is a SaaS service from Microsoft to store sensitive information in the cloud that can be used by applications both inside and outside of Azure. We go through the fundamentals of Azure Key Vault in this video.
