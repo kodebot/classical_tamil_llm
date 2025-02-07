@@ -61,4 +61,47 @@ Explore all similarity score evaluation metrics
 GPT-4 for scoring
 Human verification
 
-Azure Key Vault is a SaaS service from Microsoft to store sensitive information in the cloud that can be used by applications both inside and outside of Azure. We go through the fundamentals of Azure Key Vault in this video.
+
+## Review
+
+### Title
+
+1. Pick a better title (few title)
+2. Dataset is novel
+
+### Introduction
+
+1. Citation for Tamil language - wikipedia (why important)
+2. Should address the problem being solved - low resource language
+3. Tamil models are OK but not good enough
+4. Hence what you are doing is important
+
+Avoid butllet points and numbered list
+
+Last paragraph - this work curates new dataset, models are fine-tuned and evaluated
+
+### Related Work
+
+1. add all papers
+2. lot more info on important paper
+3. why human evaluation
+4. why text generation
+5. why few shot learning
+
+### Methodology
+
+No need for the figure
+
+3.2 measure the size of the data set in numeer of tokens
+
+Move the augumented dataset to the experiment section or in a subsection
+
+Include 3.3.1 as model hyper parameters and also introduce inference hyper parameters. Also explain why these values like other reseachrs or recommended by library
+
+include performance metrics - include the formula as well
+
+try line graph
+
+check if there is a pattern of unnecessary text
+
+
