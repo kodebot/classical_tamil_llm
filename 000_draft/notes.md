@@ -105,3 +105,68 @@ try line graph
 check if there is a pattern of unnecessary text
 
 
+
+
+
+
+
+## More notes
+
+### Intro
+1. Introduction - need more citation
+2. include does not convey we have a problem
+3. include no precense of data in digital media
+4. look for Tamil info citations from other pages
+5. Repharse the flow of the introduction
+6. Use GenAI for rephrasing
+7.
+
+### Related Work
+1. the study conducted by - should start with like this
+2. No need for separate heading - may just one both models (LLM Fine tuned on Tamil)
+3. Expand on the paper
+
+### Design Methodology
+  1. remove the instruction set box
+  2. change curated to web - ask GPT
+  3. try to simplify the diagram
+
+  3.1. Dataset
+  1. Go through all the refrerences and make sure first one mention is refreenced
+  2. more penality to be next to F thing so it will on the same line
+  3. move everything to springer template
+
+ ### Experimental results
+
+Start with Colab and computational info
+
+explain the why even when more data why the quality is low for augmented data
+
+Add some qualitative analysis - explain with an example - explain the difference between the two
+human eval and 
+
+
+### Limitatioins
+
+dont' down play
+think about limitatins again - in postive way
+use Further research - metrics  and line by line
+
+Remove Grapheme Pair encoding - very negative
+
+put all the things we did not do as futher work - how others have used and what they recommended
+
+
+### Cleanup (data)
+
+[a-zA-Z]{1,40}\s+
+[a-zA-Z]{1,40}, 
+'[a-zA-Z]{1,40}' 
+&nbsp; - replace with space
+\\t
+\\n
+\\r
+\\
+[ ]{2,100} - replace with single space
+
+
